@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guía visual · Tramo Pedagógico UTN FRA</title>
+<style>
+:root{
+  --utn-turq:#008090;
+  --utn-blue:#0060A0;
+  --utn-dark:#1B1B1B;
+  --utn-ice:#F6FAFC;
+  --utn-line:#D7E5EC;
+
+  --m1:#008090; --m1-soft:#E6F4F6; --m1-acc:#34A9B7;
+  --m2:#0060A0; --m2-soft:#E8F0FA; --m2-acc:#4B8DCA;
+  --m3:#5E8A4F; --m3-soft:#EDF4EA; --m3-acc:#8EB47E;
+  --m4:#C8832B; --m4-soft:#FFF2E3; --m4-acc:#E2A453;
+  --tfi:#4C4F8C; --tfi-soft:#EEEFFC; --tfi-acc:#9AA0E8;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#f7fafc;color:#21313f}
+.header{display:flex;align-items:center;gap:18px;padding:22px 28px;background:linear-gradient(90deg,#fff, #f2f7fb);border-bottom:1px solid var(--utn-line);position:sticky;top:0;z-index:10}
+.header img{height:64px;border-radius:6px;background:#fff}
+.header h1{margin:0;font-size:28px;color:var(--utn-dark)}
+.header p{margin:4px 0 0;color:#5a6a78}
+.wrapper{max-width:1280px;margin:0 auto;padding:26px}
+.section{margin-bottom:30px}
+.section h2{margin:0 0 12px;font-size:24px;color:#163247}
+.section .lead{margin:0 0 16px;color:#526473;line-height:1.55}
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.card{background:#fff;border:1px solid var(--utn-line);border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.04);padding:18px}
+.palette-card h3{margin:0 0 10px;font-size:18px}
+.swatches{display:flex;gap:10px;margin-bottom:12px}
+.swatch{flex:1;height:56px;border-radius:12px;position:relative;border:1px solid rgba(0,0,0,.06)}
+.swatch span{position:absolute;left:8px;bottom:6px;font-size:11px;background:rgba(255,255,255,.88);padding:3px 6px;border-radius:6px}
+.pill{display:inline-block;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:700;background:#eef5f8;color:#315264;margin:3px 6px 0 0}
+.mockup{display:grid;grid-template-columns:270px 1fr;gap:18px;min-height:820px}
+.sidebar{background:#fff;border:1px solid var(--utn-line);border-radius:22px;padding:16px}
+.side-title{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#668}
+.menu-item,.submenu-item,.tab{border-radius:12px;padding:11px 14px;margin-top:8px}
+.menu-item{background:#eef6fa;font-weight:700;color:#173d5a}
+.submenu-item{border:1px dashed #bfd4df;background:#fbfdff;color:#3f596a;font-size:14px}
+.main{background:#fff;border:1px solid var(--utn-line);border-radius:22px;padding:18px}
+.banner{min-height:92px;border-radius:18px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;overflow:hidden;position:relative;color:white;margin-bottom:16px}
+.banner:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;border:16px solid rgba(255,255,255,.2);right:-70px;bottom:-85px}
+.banner .text small{display:block;opacity:.9;font-weight:600;letter-spacing:.03em}
+.banner .text h3{margin:4px 0 0;font-size:30px;line-height:1.05}
+.banner .icon{font-size:40px;opacity:.95}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{padding:10px 14px;font-weight:700;font-size:14px;background:#f6fafc;border:1px solid var(--utn-line);color:#355062;margin:0}
+.panel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mini{border-radius:16px;padding:16px;min-height:140px;border:1px solid #e6eef2}
+.mini h4{margin:0 0 8px;font-size:18px}
+.note{padding:14px 16px;border-radius:16px;background:#f9fbfd;border:1px solid var(--utn-line);color:#4b6070;line-height:1.5}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.kpi .box{padding:14px;border-radius:16px;text-align:center;background:#f8fbfc;border:1px solid var(--utn-line)}
+.box strong{display:block;font-size:24px}
+.usage-list li{margin:6px 0;line-height:1.45}
+.footer{margin-top:22px;color:#71808f;font-size:13px}
+@media (max-width:1100px){.mockup{grid-template-columns:1fr}.grid-3,.grid-5,.grid-2,.panel-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="header">
+    <img src="logo-utn-avellaneda.png" alt="Logo UTN Avellaneda" />
+    <div>
+      <h1>Guía visual del Tramo Pedagógico</h1>
+      <p>Propuesta cromática y mockup para un entorno homogéneo, institucional y atractivo en Moodle.</p>
+    </div>
+  </div>
+  <div class="wrapper">
+    <section class="section">
+      <h2>1) Lógica general recomendada</h2>
+      <p class="lead">Mi recomendación es trabajar con <strong>dos niveles de color</strong>: un nivel <strong>institucional</strong> para la estructura común del campus y un nivel <strong>por materia</strong> para darle identidad a cada asignatura. Así mantenés coherencia visual y, al mismo tiempo, ayudás a que el estudiante distinga rápidamente dónde está.</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 style="margin-top:0">Usar colores institucionales en:</h3>
+          <ul class="usage-list">
+            <li>Portada y presentación general de cada bloque.</li>
+            <li>Hoja de ruta del bloque.</li>
+            <li>Tablón de anuncios.</li>
+            <li>Foros generales y de consultas.</li>
+            <li>Navegación, pestañas, botones principales y elementos comunes.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Usar colores por materia en:</h3>
+          <ul class="usage-list">
+            <li>Portada de cada materia.</li>
+            <li>Unidad 1, 2 y 3 de esa materia.</li>
+            <li>Ideas centrales, actividad gamificada, bibliografía e infografías.</li>
+            <li>Recursos visuales propios de cada asignatura.</li>
+            <li>Trabajo final de la materia (con un guiño al color TFI).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>2) Paleta institucional base (UTN FRA)</h2>
+      <div class="grid grid-3">
+        <div class="card palette-card">
+          <h3>Institucional</h3>
+          <div class="swatches">
+            <div class="swatch" style="background:#008090"><span>#008090</span></div>
+            <div class="swatch" style="background:#0060A0"><span>#0060A0</span></div>
+            <div class="swatch" style="background:#1B1B1B"><span>#1B1B1B</span></div>
+            <div class="swatch" style="background:#F6FAFC"><span>#F6FAFC</span></div>
+          </div>
+          <span class="pill">turquesa UTN</span><span class="pill">azul UTN</span><span class="pill">antracita</span><span class="pill">blanco hielo</span>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Criterio</h3>
+          <p>El turquesa y el azul funcionan como identidad del bloque y de la facultad. El antracita suma seriedad institucional y el blanco hielo aligera la lectura.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Regla simple</h3>
+          <p><strong>Si el recurso organiza, orienta o da contexto general</strong>, usá colores institucionales. <strong>Si el recurso desarrolla contenidos propios de una materia</strong>, usá la paleta de esa materia.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>3) Paletas recurrentes para las 4 materias + TFI</h2>
+      <p class="lead">Estas cinco paletas pueden repetirse en todos los bloques del Tramo Pedagógico. Así, por ejemplo, la “Materia 1” siempre tendría la paleta 1, la “Materia 2” siempre la paleta 2, y así sucesivamente.</p>
+      <div class="grid grid-5">
+        <div class="card palette-card">
+          <h3>Materia 1</h3>
+          <div class="swatches"><div class="swatch" style="background:var(--m1)"><span>#008090</span></div><div class="swatch" style="background:var(--m1-soft)"><span>#E6F4F6</span></div><div class="swatch" style="background:var(--m1-acc)"><span>#34A9B7</span></div></div>
+          <span class="pill">serena</span><span class="pill">clara</span><span class="pill">académica</span>
+        </div>
+        <div class="card palette-card">
+          <h3>Materia 2</h3>
+          <div class="swatches"><div class="swatch" style="background:var(--m2)"><span>#0060A0</span></div><div class="swatch" style="background:var(--m2-soft)"><span>#E8F0FA</span></div><div class="swatch" style="background:var(--m2-acc)"><span>#4B8DCA</span></div></div>
+          <span class="pill">rigurosa</span><span class="pill">institucional</span><span class="pill">limpia</span>
+        </div>
+        <div class="card palette-card">
+          <h3>Materia 3</h3>
+          <div class="swatches"><div class="swatch" style="background:var(--m3)"><span>#5E8A4F</span></div><div class="swatch" style="background:var(--m3-soft)"><span>#EDF4EA</span></div><div class="swatch" style="background:var(--m3-acc)"><span>#8EB47E</span></div></div>
+          <span class="pill">equilibrada</span><span class="pill">pedagógica</span><span class="pill">natural</span>
+        </div>
+        <div class="card palette-card">
+          <h3>Materia 4</h3>
+          <div class="swatches"><div class="swatch" style="background:var(--m4)"><span>#C8832B</span></div><div class="swatch" style="background:var(--m4-soft)"><span>#FFF2E3</span></div><div class="swatch" style="background:var(--m4-acc)"><span>#E2A453</span></div></div>
+          <span class="pill">cálida</span><span class="pill">visible</span><span class="pill">dinámica</span>
+        </div>
+        <div class="card palette-card">
+          <h3>Trabajo Final Integrador</h3>
+          <div class="swatches"><div class="swatch" style="background:var(--tfi)"><span>#4C4F8C</span></div><div class="swatch" style="background:var(--tfi-soft)"><span>#EEEFFC</span></div><div class="swatch" style="background:var(--tfi-acc)"><span>#9AA0E8</span></div></div>
+          <span class="pill">síntesis</span><span class="pill">cierre</span><span class="pill">jerarquía</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>4) Mockup visual del campus</h2>
+      <p class="lead">Acá ves una simulación práctica del esquema que te propongo. La <strong>presentación del bloque</strong> usa color institucional. Luego cada <strong>materia</strong> tiene su impronta cromática. El <strong>TFI</strong> se distingue por un color fijo que se repite en todo el trayecto.</p>
+      <div class="mockup">
+        <aside class="sidebar">
+          <div class="side-title">Bloque I</div>
+          <div class="menu-item" style="background:#e7f3f5;border-left:6px solid var(--utn-turq)">Presentación del bloque</div>
+          <div class="submenu-item">Hoja de ruta</div>
+          <div class="menu-item" style="background:var(--m1-soft);border-left:6px solid var(--m1)">Materia 1</div>
+          <div class="menu-item" style="background:var(--m2-soft);border-left:6px solid var(--m2)">Materia 2</div>
+          <div class="menu-item" style="background:var(--m3-soft);border-left:6px solid var(--m3)">Materia 3</div>
+          <div class="menu-item" style="background:var(--m4-soft);border-left:6px solid var(--m4)">Materia 4</div>
+          <div class="menu-item" style="background:var(--tfi-soft);border-left:6px solid var(--tfi)">Trabajo Final Integrador</div>
+        </aside>
+        <main class="main">
+          <div class="banner" style="background:linear-gradient(135deg,var(--utn-turq),var(--utn-blue))">
+            <div class="text"><small>Presentación general del bloque</small><h3>Bloque I · Tramo Pedagógico</h3></div>
+            <div class="icon">🏫</div>
+          </div>
+
+          <div class="tabs">
+            <div class="tab" style="background:var(--m1-soft);border-color:#bfe3e8;color:#0f5561">Presentación de la materia</div>
+            <div class="tab">Unidad 1</div>
+            <div class="tab">Unidad 2</div>
+            <div class="tab">Unidad 3</div>
+            <div class="tab" style="background:var(--tfi-soft);border-color:#d8dbfb;color:#434680">Trabajo final de la materia</div>
+          </div>
+
+          <div class="note" style="border-left:5px solid var(--m1)"><strong>Materia 1:</strong> ejemplo de uso de la paleta 1 en la materia, sus recursos, sus unidades y sus resúmenes visuales.</div>
+          <div class="panel-grid" style="margin-top:14px">
+            <div class="mini" style="background:var(--m1-soft)"><h4 style="color:var(--m1)">Ideas centrales</h4><p>Resumen visual, mapa o infografía del contenido de la unidad.</p></div>
+            <div class="mini" style="background:var(--m1-soft)"><h4 style="color:var(--m1)">Actividad gamificada</h4><p>Trivia, juego o reto de aplicación breve para verificar comprensión.</p></div>
+            <div class="mini" style="background:var(--m1-soft)"><h4 style="color:var(--m1)">Bibliografía</h4><p>Biblioteca digital o repositorio visual de lecturas obligatorias y sugeridas.</p></div>
+            <div class="mini" style="background:var(--m1-soft)"><h4 style="color:var(--m1)">Cómo leer la unidad</h4><p>Explicación breve del recorrido pedagógico y el sentido de cada recurso.</p></div>
+          </div>
+
+          <div class="kpi">
+            <div class="box"><strong style="color:var(--utn-turq)">1</strong>Paleta institucional fija</div>
+            <div class="box"><strong style="color:var(--m1)">4</strong>Paletas de materias repetibles</div>
+            <div class="box"><strong style="color:var(--tfi)">1</strong>Paleta constante para TFI</div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>5) Recomendación final de uso</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 style="margin-top:0">Estructura visual sugerida</h3>
+          <ul class="usage-list">
+            <li><strong>Bloque:</strong> institucional (turquesa + azul).</li>
+            <li><strong>Hoja de ruta:</strong> institucional con acento suave.</li>
+            <li><strong>Materia:</strong> color propio recurrente.</li>
+            <li><strong>Unidades:</strong> mismo color de la materia.</li>
+            <li><strong>Trabajo final de la materia:</strong> color de la materia + detalle TFI.</li>
+            <li><strong>Trabajo Final Integrador:</strong> paleta TFI fija.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Ventajas pedagógicas</h3>
+          <ul class="usage-list">
+            <li>Reduce la desorientación del estudiante.</li>
+            <li>Genera identidad visual estable en todo el tramo.</li>
+            <li>Diferencia claramente bloque, materia y cierre integrador.</li>
+            <li>Permite escalar el diseño a futuros bloques sin volver a empezar.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Archivo preparado como mockup HTML ilustrativo para publicar en GitHub Pages y compartir como ejemplo visual.</div>
+    </section>
+  </div>
+</body>
+</html>

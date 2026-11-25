@@ -1,0 +1,2 @@
+Subí esta carpeta a un repositorio de GitHub Pages para ver el mockup online.
+Incluye una guía cromática + una simulación visual del aula Moodle.
